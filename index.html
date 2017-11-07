@@ -66,7 +66,7 @@ PWD=(""+x).substr(indOfPwd+4,indOfNext-indOfPwd-4);
 PARMS="";
 if (indOfLQID>0) PARMS=(""+xSrc).substr(indOfLQID+6);
 y="";
-if (indOfSur>0 && indOfPwd>0) y="http://10.48.230.6/survey/"+SID+"/"+PWD+"/"+"?logo=1";
+if (indOfSur>0 && indOfPwd>0) y="http://app-ksbeta2.ssstest.com/survey/"+SID+"/"+PWD+"/"+"?logo=1";
 indOfPwd2y=(""+y.toLowerCase()).indexOf("pwd2=");
 indOfPwd2x=(""+x.toLowerCase()).indexOf("pwd2=");
 withoutPwd2 =(""+y).substr(0,indOfPwd2y-2);
@@ -75,8 +75,8 @@ if (indOfSur>0 && indOfPwd>0 && indOfPwd2x>0) {
     else window.location=withoutPwd2+"/?logo=1&"+(""+x).substr(indOfPwd2x,(""+x).length-indOfPwd2x);
 }
 if (indOfSur>0 && indOfPwd>0 && indOfPwd2x<0) {
-    if (indOfLQID>0) window.location="http://10.48.230.6/survey/"+SID+"/"+PWD+"/"+"?logo=1&LQID=1"+PARMS;
-    else window.location="http://10.48.230.6/survey/"+SID+"/"+PWD+"/"+"?logo=1";
+    if (indOfLQID>0) window.location="http://app-ksbeta2.ssstest.com/survey/"+SID+"/"+PWD+"/"+"?logo=1&LQID=1"+PARMS;
+    else window.location="http://app-ksbeta2.ssstest.com/survey/"+SID+"/"+PWD+"/"+"?logo=1";
 }
 indOfSurveyID=(""+x.toLowerCase()).indexOf("surveyid=");
 indOfReportID=(""+x.toLowerCase()).indexOf("reportid=");
@@ -85,7 +85,7 @@ SurveyID=(""+x).substr(indOfSurveyID+9,indOfReportID-indOfSurveyID-9);
 ReportID=(""+x).substr(indOfReportID+9,indOfpw-indOfReportID-9);
 pw=(""+x).substr(indOfpw+3,(""+x).length-indOfpw);
 if (indOfSurveyID>0 && indOfpw>0){
-    window.location="http://10.48.230.6/Member/Public/report.jsp?SurveyID="+SurveyID+"&ReportID="+ReportID+"&pw="+pw+"&logo=1";
+    window.location="http://app-ksbeta2.ssstest.com/Member/Public/report.jsp?SurveyID="+SurveyID+"&ReportID="+ReportID+"&pw="+pw+"&logo=1";
 }
 // End -->
 </script>
